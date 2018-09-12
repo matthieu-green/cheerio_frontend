@@ -17,15 +17,41 @@ export class NewsItemComponent implements OnInit {
   @Input() image: string;
   @Input() index: number;
 
-  hacker = false;
-  monde = false;
-  equipe = false;
-  tech = false;
-  economist = false;
-  wired = false;
-  wallstreet = false;
-  radar = false;
-  bbc = false;
+  bbcColor = "rgba(186, 28, 34, 0.5)"
+  mondeColor = "rgb(254, 198, 46, 0.3)";
+  economistColor = "rgba(252, 13, 27, 0.5)"
+  techColor = "rgba(23, 158, 25, 0.3)"
+  hackerColor = "rgba(252, 102, 33, 0.3)"
+  wallstreetColor = "rgba(100, 100, 100, 0.3)"
+  equipeColor = "rgba(212, 33, 22, 0.3)"
+  radarColor = "rgba(50, 111, 144, 0.3)"
+  wiredColor = "rgba(0, 0, 0, 0.6)"
+
+  bbcColor1 = "rgba(186, 28, 34, 0.5)"
+  mondeColor1 = "rgb(254, 198, 46, 0.3)";
+  economistColor1 = "rgba(252, 13, 27, 0.5)"
+  techColor1 = "rgba(23, 158, 25, 0.3)"
+  hackerColor1 = "rgba(252, 102, 33, 0.3)"
+  wallstreetColor1 = "rgba(100, 100, 100, 0.3)"
+  equipeColor1 = "rgba(212, 33, 22, 0.3)"
+  radarColor1 = "rgba(50, 111, 144, 0.3)"
+  wiredColor1 = "rgba(0, 0, 0, 0.6)"
+
+
+  mondeUrl = "http://www.zecraft.com/wp-content/uploads/2016/04/le-monde-logotype-old.png";
+  economistUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/TheEconomistLogo.svg/2000px-TheEconomistLogo.svg.png"
+  techUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/TechCrunch_logo.svg/1200px-TechCrunch_logo.svg.png"
+  hackerUrl = "https://techcrunch.com/wp-content/uploads/2013/05/hacker-news1.jpg?w=600"
+  wallstreetUrl = "https://ff9a085de27ee215499f-d152abb8b8e2f4e12e4b8bb75494773c.ssl.cf1.rackcdn.com/Wall-Street-Journal-Logo.jpg"
+  equipeUrl = "https://upload.wikimedia.org/wikipedia/fr/4/4f/Logo_L%27%C3%89quipe_21.svg"
+  wiredUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wired_logo.svg/2000px-Wired_logo.svg.png"
+  radarUrl = "http://www.livescribe.com/blog/noteworthy2/wp-content/uploads/2014/01/thesprezz-techradar-logo-white2.png"
+
+  imageUrl: string;
+  bckColor: string;
+  bColor: string;
+
+
   search = true;
   imageVerif = false;
 
@@ -35,25 +61,41 @@ export class NewsItemComponent implements OnInit {
 
     console.log(this.index);
 
-    if(this.category == "hacker-news"){
-      this.hacker = true;
-    }else if (this.category == "techcrunch"){
-      this.tech = true;
-    }else if (this.category == "le-monde"){
-      this.monde = true;
-    }else if(this.category == "lequipe"){
-      this.title.replace("s&#039;impose", "s'impose");
-      this.equipe = true;
-    }else if(this.category == "the-economist"){
-      this.economist = true;
-    }else if(this.category == "the-wall-street-journal"){
-      this.wallstreet = true;
-    }else if(this.category == "wired"){
-      this.wired = true;
-    }else if(this.category == "techradar"){
-      this.radar = true;
+    if(this.category == "le-monde"){
+      this.bckColor = this.mondeColor;
+      this.bColor = this.mondeColor1;
+      this.imageUrl = this.mondeUrl;
     }else if(this.category == "bbc-news"){
-      this.bbc = true;
+      this.bckColor = this.bbcColor;
+      this.bColor = this.bbcColor1;
+    }else if(this.category == "lequipe"){
+      this.bckColor = this.equipeColor;
+      this.bColor = this.equipeColor1;
+      this.imageUrl = this.equipeUrl;
+    }else if(this.category == "techcrunch"){
+      this.bckColor = this.techColor;
+      this.bColor = this.techColor1;
+      this.imageUrl = this.techUrl;
+    }else if(this.category == "techradar"){
+      this.bckColor = this.radarColor;
+      this.bColor = this.radarColor1;
+      this.imageUrl = this.radarUrl;
+    }else if(this.category == "the-wall-street-journal"){
+      this.bckColor = this.wallstreetColor;
+      this.bColor = this.wallstreetColor1;
+      this.imageUrl = this.wallstreetUrl;
+    }else if(this.category == "the-economist"){
+      this.bckColor = this.economistColor;
+      this.bColor = this.economistColor1;
+      this.imageUrl = this.economistUrl;
+    }else if(this.category == "hacker-news"){
+      this.bckColor = this.hackerColor;
+      this.bColor = this.hackerColor1;
+      this.imageUrl = this.hackerUrl;
+    }else if(this.category == "wired"){
+      this.bckColor = this.wiredColor;
+      this.bColor = this.wiredColor1;
+      this.imageUrl = this.wiredUrl;
     }
 
     if(this.image == null){

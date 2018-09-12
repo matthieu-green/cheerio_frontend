@@ -1437,7 +1437,7 @@ var NewProductComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"search\" class=\"transform\">\n\n  <div *ngIf=\"monde && search\">\n    <div class=\"hoverable\" style=\"background-color: rgba(254, 198, 46, 0.3); border-radius: 10px; border: 1px solid rgba(254, 198, 46, 0.8)\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px\"><img src=\"http://aqua-etiam.com/wp-content/uploads/2015/03/mondefr_ios_app.png\" style=\"max-height: 25px; margin-top: \"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"http://aqua-etiam.com/wp-content/uploads/2015/03/mondefr_ios_app.png\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n  <div *ngIf=\"tech && search\">\n    <div class=\"hoverable\" style=\"background-color: rgba(23, 158, 25, 0.3); border-radius: 10px; border: 1px solid rgba(23, 158, 25, 0.8)\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/TechCrunch_logo.svg/1200px-TechCrunch_logo.svg.png\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/TechCrunch_logo.svg/1200px-TechCrunch_logo.svg.png\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n  <div *ngIf=\"hacker && search\">\n    <div class=\"hoverable\" style=\"background-color: rgba(252, 102, 33, 0.3); border-radius: 10px; border: 1px solid rgba(252, 102, 33, 0.8)\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/d9/07/cb/d907cbab-a1b6-e857-6983-e65983d4307f/source/512x512bb.jpg\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/d9/07/cb/d907cbab-a1b6-e857-6983-e65983d4307f/source/512x512bb.jpg\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n\n  <div *ngIf=\"equipe && search\">\n    <div class=\"hoverable\" style=\"background-color: rgba(212, 33, 22, 0.3); border-radius: 10px; border: 1px solid rgba(212, 33, 22, 0.8)\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://media.glassdoor.com/sqll/1132942/l-equipe-squarelogo-1456312416435.png\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://media.glassdoor.com/sqll/1132942/l-equipe-squarelogo-1456312416435.png\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n  <div *ngIf=\"economist && search\">\n    <div class=\"hoverable\" style=\"background-color: rgba(252, 13, 27, 0.5); border-radius: 10px; border: 1px solid rgba(252, 13, 27, 0.8)\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/TheEconomistLogo.svg/2000px-TheEconomistLogo.svg.png\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/TheEconomistLogo.svg/2000px-TheEconomistLogo.svg.png\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n  <div *ngIf=\"wallstreet && search\">\n    <div class=\"hoverable\" style=\"background-color: rgba(100, 100, 100, 0.3); border-radius: 10px; border: 1px solid rgba(100, 100, 100, 0.8)\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px; font-family: 'Times New Roman'\"><img src=\"https://www.romania-insider.com/wp-content/uploads/2015/03/wall-street-journal-logo.png\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://www.romania-insider.com/wp-content/uploads/2015/03/wall-street-journal-logo.png\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n  <div *ngIf=\"wired && search\">\n    <div class=\"hoverable\" style=\"background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; border: 1px solid rgb(0, 0, 0)\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"white-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wired_logo.svg/2000px-Wired_logo.svg.png\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 128, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wired_logo.svg/2000px-Wired_logo.svg.png\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 128, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n  <div *ngIf=\"radar && search\">\n    <div class=\"hoverable\" style=\"background-color: rgba(50, 111, 144, 0.3); border-radius: 10px; border: 1px solid rgba(50, 111, 144, 0.8)\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px;\"><img src=\"https://icon-locator.herokuapp.com/icon?url=http://www.techradar.com&size=70..120..200\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://icon-locator.herokuapp.com/icon?url=http://www.techradar.com&size=70..120..200\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n\n  <div *ngIf=\"bbc && search\">\n    <div class=\"hoverable\" style=\"background-color: rgba(186, 28, 34, 0.5); border-radius: 10px; border: 1px solid rgba(186, 28, 34, 0.8)\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://signaturecapital.co.uk/wp-content/uploads/2018/04/BBC-News.jpg\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"https://signaturecapital.co.uk/wp-content/uploads/2018/04/BBC-News.jpg\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n\n\n<br>\n</div>\n"
+module.exports = "<div *ngIf=\"search\" class=\"transform hide-on-small-only\">\n\n  <div *ngIf=\"search\">\n    <div class=\"hoverable\" style=\"; border-radius: 10px; border: 1px solid\" [ngStyle]=\"{'background-color': bckColor, 'border-color': bColor}\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px;\"><img src=\"{{imageUrl}}\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2 center\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"{{imageUrl}}\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n<br>\n</div>\n\n<div *ngIf=\"search\" class=\"transform hide-on-med-and-up\">\n\n  <div *ngIf=\"search\">\n    <div class=\"hoverable\" style=\"overflow: hidden; border-radius: 10px; border: 1px solid\" [ngStyle]=\"{'background-color': bckColor, 'border-color': bColor}\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px;\"><img src=\"{{imageUrl}}\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 90vw;\">\n          <div class=\"col s12 m10\">\n            <img src=\"{{imageUrl}}\" class=\"right\" style=\"max-height: 25px; position: absolute; margin-top: -30px; margin-right: 0px\">\n            <p style=\"font-size: 20px; margin: 5px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n<br>\n</div>\n"
 
 /***/ }),
 
@@ -1448,7 +1448,7 @@ module.exports = "<div *ngIf=\"search\" class=\"transform\">\n\n  <div *ngIf=\"m
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".transform {\n  transition: all 3s ease; }\n"
+module.exports = ".transform {\n  transition: all 3s ease; }\n\np {\n  text-align: justify; }\n"
 
 /***/ }),
 
@@ -1479,48 +1479,81 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var NewsItemComponent = /** @class */ (function () {
     function NewsItemComponent(newsComponent) {
         this.newsComponent = newsComponent;
-        this.hacker = false;
-        this.monde = false;
-        this.equipe = false;
-        this.tech = false;
-        this.economist = false;
-        this.wired = false;
-        this.wallstreet = false;
-        this.radar = false;
-        this.bbc = false;
+        this.bbcColor = "rgba(186, 28, 34, 0.5)";
+        this.mondeColor = "rgb(254, 198, 46, 0.3)";
+        this.economistColor = "rgba(252, 13, 27, 0.5)";
+        this.techColor = "rgba(23, 158, 25, 0.3)";
+        this.hackerColor = "rgba(252, 102, 33, 0.3)";
+        this.wallstreetColor = "rgba(100, 100, 100, 0.3)";
+        this.equipeColor = "rgba(212, 33, 22, 0.3)";
+        this.radarColor = "rgba(50, 111, 144, 0.3)";
+        this.wiredColor = "rgba(0, 0, 0, 0.6)";
+        this.bbcColor1 = "rgba(186, 28, 34, 0.5)";
+        this.mondeColor1 = "rgb(254, 198, 46, 0.3)";
+        this.economistColor1 = "rgba(252, 13, 27, 0.5)";
+        this.techColor1 = "rgba(23, 158, 25, 0.3)";
+        this.hackerColor1 = "rgba(252, 102, 33, 0.3)";
+        this.wallstreetColor1 = "rgba(100, 100, 100, 0.3)";
+        this.equipeColor1 = "rgba(212, 33, 22, 0.3)";
+        this.radarColor1 = "rgba(50, 111, 144, 0.3)";
+        this.wiredColor1 = "rgba(0, 0, 0, 0.6)";
+        this.mondeUrl = "http://www.zecraft.com/wp-content/uploads/2016/04/le-monde-logotype-old.png";
+        this.economistUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/TheEconomistLogo.svg/2000px-TheEconomistLogo.svg.png";
+        this.techUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/TechCrunch_logo.svg/1200px-TechCrunch_logo.svg.png";
+        this.hackerUrl = "https://techcrunch.com/wp-content/uploads/2013/05/hacker-news1.jpg?w=600";
+        this.wallstreetUrl = "https://ff9a085de27ee215499f-d152abb8b8e2f4e12e4b8bb75494773c.ssl.cf1.rackcdn.com/Wall-Street-Journal-Logo.jpg";
+        this.equipeUrl = "https://upload.wikimedia.org/wikipedia/fr/4/4f/Logo_L%27%C3%89quipe_21.svg";
+        this.wiredUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wired_logo.svg/2000px-Wired_logo.svg.png";
+        this.radarUrl = "http://www.livescribe.com/blog/noteworthy2/wp-content/uploads/2014/01/thesprezz-techradar-logo-white2.png";
         this.search = true;
         this.imageVerif = false;
     }
     NewsItemComponent.prototype.ngOnInit = function () {
         var _this = this;
         console.log(this.index);
-        if (this.category == "hacker-news") {
-            this.hacker = true;
-        }
-        else if (this.category == "techcrunch") {
-            this.tech = true;
-        }
-        else if (this.category == "le-monde") {
-            this.monde = true;
-        }
-        else if (this.category == "lequipe") {
-            this.title.replace("s&#039;impose", "s'impose");
-            this.equipe = true;
-        }
-        else if (this.category == "the-economist") {
-            this.economist = true;
-        }
-        else if (this.category == "the-wall-street-journal") {
-            this.wallstreet = true;
-        }
-        else if (this.category == "wired") {
-            this.wired = true;
-        }
-        else if (this.category == "techradar") {
-            this.radar = true;
+        if (this.category == "le-monde") {
+            this.bckColor = this.mondeColor;
+            this.bColor = this.mondeColor1;
+            this.imageUrl = this.mondeUrl;
         }
         else if (this.category == "bbc-news") {
-            this.bbc = true;
+            this.bckColor = this.bbcColor;
+            this.bColor = this.bbcColor1;
+        }
+        else if (this.category == "lequipe") {
+            this.bckColor = this.equipeColor;
+            this.bColor = this.equipeColor1;
+            this.imageUrl = this.equipeUrl;
+        }
+        else if (this.category == "techcrunch") {
+            this.bckColor = this.techColor;
+            this.bColor = this.techColor1;
+            this.imageUrl = this.techUrl;
+        }
+        else if (this.category == "techradar") {
+            this.bckColor = this.radarColor;
+            this.bColor = this.radarColor1;
+            this.imageUrl = this.radarUrl;
+        }
+        else if (this.category == "the-wall-street-journal") {
+            this.bckColor = this.wallstreetColor;
+            this.bColor = this.wallstreetColor1;
+            this.imageUrl = this.wallstreetUrl;
+        }
+        else if (this.category == "the-economist") {
+            this.bckColor = this.economistColor;
+            this.bColor = this.economistColor1;
+            this.imageUrl = this.economistUrl;
+        }
+        else if (this.category == "hacker-news") {
+            this.bckColor = this.hackerColor;
+            this.bColor = this.hackerColor1;
+            this.imageUrl = this.hackerUrl;
+        }
+        else if (this.category == "wired") {
+            this.bckColor = this.wiredColor;
+            this.bColor = this.wiredColor1;
+            this.imageUrl = this.wiredUrl;
         }
         if (this.image == null) {
             this.imageVerif = false;
@@ -1599,7 +1632,7 @@ var NewsItemComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n  <ul class=\"collapsible\">\n    <li>\n      <div class=\"collapsible-header\"><i class=\"material-icons\">search</i>Search Bar</div>\n      <div class=\"collapsible-body\">\n        <div class=\"row\">\n          <div class=\"col s11\">\n            <input placeholder=\"Search Articles\" type=\"text\" [(ngModel)]=\"search\">\n          </div>\n        </div>\n      </div>\n    </li>\n    <li>\n      <div class=\"collapsible-header\"><i class=\"material-icons\">check_box</i>Search Sources</div>\n      <div class=\"collapsible-body\">\n        <p>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkEquipe\"/>\n            <span>L'équipe</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkMonde\"/>\n            <span>Le Monde</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkWallstreet\"/>\n            <span>The Worl Street Journal</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkEconomist\"/>\n            <span>The Economist</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkTech\"/>\n            <span>TechCrunch</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkHacker\"/>\n            <span>Hacker News</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkWired\"/>\n            <span>Wired</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkTechRadar\"/>\n            <span>Tech Radar</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkBBC\"/>\n            <span>BBC News</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n        </p>\n      </div>\n    </li>\n  </ul>\n</div>\n\n<button *ngIf=\"!wait\" (click)=\"getNews()\" class=\"btn-flat right\"><i class=\"fas fa-sync-alt\"></i></button>\n\n\n<img *ngIf=\"wait\" style=\"max-height: 200px; margin-top: 5%; margin-left: 40%\" src=\"https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-18.gif\">\n\n<div *ngIf=\"wait\">\n  <br><br><br><br><br><br><br><br><br>\n</div>\n\n<br><br>\n\n<div [ngStyle]=\"{top: top}\">\n  <app-news-item\n    *ngFor = \"let new of news; let i = index\"\n    [url] = \"new.url\"\n    [title] = \"new.title\"\n    [description] = \"new.description\"\n    [date] = \"new.publishedAt\"\n    [category] =\"new.source.id\"\n    [image]=\"new.urlToImage\"\n    [index] = \"i\"\n  ></app-news-item>\n</div>\n"
+module.exports = "\n<div>\n  <ul class=\"collapsible\">\n    <li>\n      <div class=\"collapsible-header\"><i class=\"material-icons\">search</i>Search Bar</div>\n      <div class=\"collapsible-body\">\n        <div class=\"row\">\n          <div class=\"col s11\">\n            <input placeholder=\"Search Articles\" type=\"text\" [(ngModel)]=\"search\">\n          </div>\n        </div>\n      </div>\n    </li>\n    <li>\n      <div class=\"collapsible-header\"><i class=\"material-icons\">check_box</i>Search Sources</div>\n      <div class=\"collapsible-body\">\n        <p>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkEquipe\"/>\n            <span>L'équipe</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkMonde\"/>\n            <span>Le Monde</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkWallstreet\"/>\n            <span>The Worl Street Journal</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkEconomist\"/>\n            <span>The Economist</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkTech\"/>\n            <span>TechCrunch</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkHacker\"/>\n            <span>Hacker News</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkWired\"/>\n            <span>Wired</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkTechRadar\"/>\n            <span>Tech Radar</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n          <label>\n            <input type=\"checkbox\" [(ngModel)]=\"checkBBC\"/>\n            <span>BBC News</span>\n            <span style=\"opacity: 0\">aaa</span>\n          </label>\n        </p>\n      </div>\n    </li>\n  </ul>\n</div>\n\n<button *ngIf=\"!wait\" (click)=\"getNews()\" class=\"btn-flat right\"><i class=\"fas fa-sync-alt\"></i></button>\n\n\n<img *ngIf=\"wait\" style=\"max-height: 200px; margin-top: 5%; margin-left: 40%\" src=\"https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-18.gif\">\n\n<div *ngIf=\"wait\">\n  <br><br><br><br><br><br><br><br><br>\n</div>\n\n<br><br>\n\n<div class=\"transform\" [ngStyle]=\"{'margin-top': top}\">\n  <app-news-item\n    *ngFor = \"let new of news; let i = index\"\n    [url] = \"new.url\"\n    [title] = \"new.title\"\n    [description] = \"new.description\"\n    [date] = \"new.publishedAt\"\n    [category] =\"new.source.id\"\n    [image]=\"new.urlToImage\"\n    [index] = \"i\"\n  ></app-news-item>\n</div>\n"
 
 /***/ }),
 
@@ -1610,7 +1643,7 @@ module.exports = "\n<div>\n  <ul class=\"collapsible\">\n    <li>\n      <div cl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".transform {\n  transition: all 1s ease; }\n"
 
 /***/ }),
 
@@ -1654,7 +1687,7 @@ var NewsComponent = /** @class */ (function () {
         this.checkWallstreet = true;
         this.checkTechRadar = true;
         this.checkBBC = true;
-        this.top = "300px";
+        this.top = "800px";
     }
     NewsComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1671,7 +1704,9 @@ var NewsComponent = /** @class */ (function () {
             .subscribe(function (news) {
             _this.news = news;
             _this.wait = false;
-            _this.top = "0px";
+            setTimeout(function () {
+                _this.top = "0px";
+            }, 1000);
         }, function (errmess) { return _this.errMess = errmess; });
     };
     NewsComponent.prototype.getNews1 = function () {
