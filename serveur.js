@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 var path = require('path');
 
-app.use('/', express.static('dist/e-thik'))
+app.use('/', express.static('dist/my-web-app'))
 
 app.listen(4000, () => console.log('Example app listening on port 4000!'))
 
