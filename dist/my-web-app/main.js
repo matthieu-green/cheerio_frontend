@@ -708,7 +708,7 @@ var AuthorComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "baseUrl", function() { return baseUrl; });
-var baseUrl = "http://ec2-35-180-114-147.eu-west-3.compute.amazonaws.com:8080";
+var baseUrl = "http://ec2-35-180-114-147.eu-west-3.compute.amazonaws.com:8080/";
 
 
 /***/ }),
