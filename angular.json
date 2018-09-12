@@ -76,7 +76,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-web-app:build"
+            "browserTarget": "my-web-app:build",
+            "port": 4000
           },
           "configurations": {
             "production": {
