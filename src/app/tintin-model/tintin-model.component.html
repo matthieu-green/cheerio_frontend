@@ -1,0 +1,13 @@
+<div class="card col s3 transform1" (mouseover)="onHover()" (mouseleave)="onLeave()" style="width: 250px; margin: 10px; float: left" [ngStyle]="{left: mLeft}">
+    <div class="card-image waves-effect waves-block waves-light" style="margin-top: 5px; margin-left: -5px; margin-right: -5px">
+      <img class="activator transform" src={{imageSource}}>
+    </div>
+    <div class="card-content transform" [ngStyle]="{'margin-top': cardTop}">
+      <button class="btn-flat" style="border-radius: 5%; background-color: rgb(202, 8, 19); color: white; font-style: italic; font-size: 20px" (click)="pTransition(_id)">{{price}}$</button><i class="material-icons right">more_vert</i>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{title}}<i class="material-icons right">close</i></span>
+      <p>{{description}}</p>
+      <button class="btn-flat white-text right" style="background-color: green; text-align: center; width: 100%">{{price}}$<i class="fas fa-cart-plus white-text"></i></button>
+    </div>
+</div>

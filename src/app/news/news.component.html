@@ -1,0 +1,91 @@
+
+<div>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">search</i>Search Bar</div>
+      <div class="collapsible-body">
+        <div class="row">
+          <div class="col s11">
+            <input placeholder="Search Articles" type="text" [(ngModel)]="search">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">check_box</i>Search Sources</div>
+      <div class="collapsible-body">
+        <p>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkEquipe"/>
+            <span>L'équipe</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkMonde"/>
+            <span>Le Monde</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkWallstreet"/>
+            <span>The Worl Street Journal</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkEconomist"/>
+            <span>The Economist</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkTech"/>
+            <span>TechCrunch</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkHacker"/>
+            <span>Hacker News</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkWired"/>
+            <span>Wired</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkTechRadar"/>
+            <span>Tech Radar</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkBBC"/>
+            <span>BBC News</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<button *ngIf="!wait" (click)="getNews()" class="btn-flat right"><i class="fas fa-sync-alt"></i></button>
+
+
+<img *ngIf="wait" style="max-height: 200px; margin-top: 5%; margin-left: 40%" src="https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-18.gif">
+
+<div *ngIf="wait">
+  <br><br><br><br><br><br><br><br><br>
+</div>
+
+<br><br>
+
+<div [ngStyle]="{top: top}">
+  <app-news-item
+    *ngFor = "let new of news; let i = index"
+    [url] = "new.url"
+    [title] = "new.title"
+    [description] = "new.description"
+    [date] = "new.publishedAt"
+    [category] ="new.source.id"
+    [image]="new.urlToImage"
+    [index] = "i"
+  ></app-news-item>
+</div>

@@ -1,20 +1,265 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!-- Section: Parallax -->
+<section class="section section-questions transform1" *ngIf="!animationDone">
+  <div class="pimg1 transform" [ngStyle]="{top: top}">
+    <div class="ptext">
+      <span class="white-text transform1" [ngStyle]="{opacity: op}">
+        Comic Store
+      </span>
+    </div>
+  </div>
+</section>
+
+
+<div class="transform1" [ngStyle]="{opacity: opacity}"  *ngIf="animationDone">
+
+  <!--Home navbar-->
+
+<div class="navbar-fixed" style="opacity: 0.9;" >
+  <nav class="white">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><img src="https://expatliving.hk/wp-content/uploads/2017/10/pastedImage.png" style="height: 50px; width: 50px"></a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger" onclick="maFonction1()">
+          <i class="material-icons black-text">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a routerLink="livres" class="dropdown-trigger dropdownProduct black-text transform1" data-target="dropdown1" style="opacity: 1; background-color: white; outline: none !important; font-family: 'Chalkduster'"><span>Comics</span></a>
+          </li>
+          <li>
+            <a href="/blog" class=" black-text transform1" style="opacity: 1; background-color: white; font-family: 'Chalkduster'">Blog</a>
+          </li>
+          <li>
+            <a href="#contact" class="black-text transform1" style="opacity: 1; background-color: white; font-family: 'Chalkduster'">Contact</a>
+          </li>
+          <li>
+            <a *ngIf="!auth" id="log" class="modal-trigger black-text transform1" data-target= "modal1" style="background-color: white; font-family: 'Chalkduster'" >Sign In <i class="material-icons right">person_pin</i></a>
+            <a *ngIf="auth" class="dropdownProduct transform1 text" [ngClass]="{'dropdown-trigger': admin}" data-target="dropdown2" style="background-color: white"><span [ngStyle]="{color: nameColor}">{{name}}</span></a>
+          </li>
+          <li *ngIf="auth">
+            <a *ngIf="auth" class="modal-trigger transform1" data-target="modal2" style="background-color: white"><i class="fas fa-sign-out-alt black-text right"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
+
+<!-- SideNav  -->
+<div class="hide-on-med-and-down" style="position: fixed; width: 170px; margin-top: 60px; margin-left: 10px; z-index: 5">
+  <div style="border-bottom: 1px solid black; width: 50px"></div>
+  <ul>
+    <li style="margin: 20px" (mouseover)="onHover1()" (mouseleave)="onLeave1()">
+      <a routerLink="home" class="beef1 black-text"><span id="home" style="font-family: 'Comic Sans MS'">Home</span></a>
+      <div class="transform" style="border-bottom: 1px solid rgb(8, 100, 19)" [ngStyle]="{width: width1}"></div>
+    </li>
+    <li style="margin: 20px" (mouseover)="onHover2()" (mouseleave)="onLeave2()">
+      <a href="#services" class=" beef1 black-text"><span id="tintin" style="font-family: 'Comic Sans MS'">Tintin</span></a>
+      <div class="transform" style="border-bottom: 1px solid rgb(8, 100, 19)" [ngStyle]="{width: width2}"></div>
+    </li>
+    <li style="margin: 20px" (mouseover)="onHover3()" (mouseleave)="onLeave3()">
+      <a href="/produits" class=" beef1 black-text"><span id="gaston" style="font-family: 'Comic Sans MS'">Gaston Lagaffe</span></a>
+      <div class="transform" style="border-bottom: 1px solid rgb(8, 100, 19)" [ngStyle]="{width: width3}"></div>
+    </li>
+    <li style="margin: 20px" (mouseover)="onHover4()" (mouseleave)="onLeave4()">
+      <a href="/blog" class=" beef1 black-text"><span id="spirou" style="font-family: 'Comic Sans MS'">Spirou</span></a>
+      <div class="transform" style="border-bottom: 1px solid rgb(8, 100, 19)" [ngStyle]="{width: width4}"></div>
+    </li>
+    <li style="margin: 20px" (mouseover)="onHover5()" (mouseleave)="onLeave5()">
+      <a href="#contact" class="beef1 black-text"><span id="astérix" style="font-family: 'Comic Sans MS'">Astérix</span></a>
+      <div class="transform" style="border-bottom: 1px solid rgb(8, 100, 19)" [ngStyle]="{width: width5}"></div>
+    </li>
+    <li style="margin: 20px">
+      <a id="log1" class="modal-trigger black-text" data-target = "modal1"><i class="material-icons">person_pin</i></a>
+    </li>
+  </ul>
+  <div style="border-bottom: 1px solid black; width: 50px"></div>
+</div>
+
+<!-- NavBar Sign In MODAL  -->
+<div id="modal1" class="modal" style="max-height: 600px !important">
+  <div class="modal-content">
+    <div *ngIf="!signup">
+
+      <h4><span class="txt1">Login</span> Page</h4>
+
+      <div *ngIf="errMess && !auth" class="red lighten-4 red-text">
+        <p style="text-align:center; font-size: 16px;">Mauvais nom d'utilisateur ou mot de passe</p>
+      </div>
+
+      <div *ngIf="auth" class="green lighten-4 green-text">
+        <h4>You are logged in as <span style="text-transform: capitalize">{{name}}</span></h4>
+      </div>
+      <br>
+
+      <div *ngIf="signupSuccess" class="green lighten-4 green-text">
+        <h4>Thanks for registering <span style="text-transform: capitalize">{{name}}</span></h4>
+      </div>
+      <br>
+
+      <form *ngIf="!auth" (ngSubmit)="onSubmit(s)" #s="ngForm" id="loginForm">
+        <div class="input-field">
+          <i class="material-icons prefix">account_circle</i>
+          <label for="username">
+            Username
+          </label>
+          <input type="text" id="username" [(ngModel)]="user1.username" #username="ngModel" required name="usename">
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <label for="password">
+            Password
+          </label>
+          <input type="password" id="password" [(ngModel)]="user1.password" #password="ngModel" required name="password">
+        </div>
+        <div *ngIf="!auth" class="modal-footer">
+          <button *ngIf="!auth" type="button" class="modal-close btn-flat cancel">Cancel</button>
+          <button *ngIf="!auth"  type="submit" name="submit" class="btn-flat waves-effect waves-light" [disabled]="s.invalid">Login<i class="material-icons right">arrow_forward</i></button>
+        </div>
+      </form>
+      <div *ngIf="auth" class="modal-footer">
+        <button *ngIf="auth" type="button" class="modal-close btn-flat" (click)="reload()">Close</button>
+      </div>
+    </div>
+
+    <div *ngIf="signup">
+
+      <h4><span class="txt1">Sign Up</span> Page</h4>
+
+      <div *ngIf="emailProblem" class="red lighten-4 red-text">
+        <p style="text-align:center; font-size: 16px;">Les adresses mail ne coïncident pas</p>
+      </div>
+      <br>
+
+      <form (ngSubmit)="onSignup(q)" #q="ngForm" id="signupForm">
+        <div class="input-field">
+          <i class="material-icons prefix">account_circle</i>
+          <label for="name">
+            Nom et Prénom
+          </label>
+          <input type="text" id="name" [(ngModel)]="user.name" #name="ngModel" required name="name">
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">room</i>
+          <label for="address">
+            Adresse pour livraison (optionel)
+          </label>
+          <input type="text" id="address" [(ngModel)]="user.address" #address="ngModel" name="address">
+        </div>
+        <div class="input-field">
+          <i class="material-icons validate prefix">email</i>
+          <label for="username">
+            Adresse Mail
+          </label>
+          <input type="email" class="validate" id="username1" [(ngModel)]="user.username" #username1="ngModel" required name="username">
+          <span class="helper-text" data-error="Enter a valid email address please" data-success="Valid Email address">Email address</span>
+        </div>
+        <div class="input-field" (focusout)="checkEmail()">
+          <i class="material-icons prefix">email</i>
+          <label for="emailConfirm">
+            Confirmation de l'adresse mail
+          </label>
+          <input type="text" id="emailConfirm" required name="emailConfirm">
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <label for="password">
+            Password
+          </label>
+          <input type="password" id="password1" [(ngModel)]="user.password" #password1="ngModel" required name="password">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-close btn-flat cancel">Cancel</button>
+          <button type="submit" name="submit" class="btn-flat waves-effect waves-light" [disabled]="q.invalid">Sing Up<i class="material-icons right">arrow_forward</i></button>
+        </div>
+      </form>
+    </div>
+
+    <button *ngIf="!signup" type="button" class="btn-flat blue lighten-2 white-text" style="border-radius: 5px" (click)="signUpButton()">Sign Up!</button>
+    <button *ngIf="signup" type="button" class="btn-flat blue lighten-2 white-text" style="border-radius: 5px" (click)="loginButton()">Log In</button>
+
+  </div>
+</div>
+
+
+<!-- NavBar Sign Out MODAL  -->
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <h4><span class="txt1">Logout </span>Message</h4>
+    <p>Êtes-vous sûrs de vouloir vous déconnecter?</p>
+      <div class="modal-footer">
+        <button type="button" class="modal-close btn-flat cancel">Cancel</button>
+        <button type="button" name="logout" class="modal-close btn-flat waves-effect waves-light" (click)="logOut()">Logout<i class="fas fa-sign-out-alt red-text right"></i></button>
+      </div>
+  </div>
+</div>
+
+<!-- DropDown structure  products-->
+<ul style="border-left: 1px solid rgb(8, 100, 19)" id="dropdown1" class="dropdown-content">
+  <li><a class="black-text" href="#" style="font-family: 'Comic Sans MS'">Tintin</a></li>
+  <li><a class="black-text" href="#" style="font-family: 'Comic Sans MS'">Spirou</a></li>
+  <li><a class="black-text" href="#" style="font-family: 'Comic Sans MS'">Gaston Lgaffe</a></li>
+  <li><a class="black-text" href="#" style="font-family: 'Comic Sans MS'">Astérix</a></li>
 </ul>
 
+<!-- DropDown structure  Admin-->
+<ul style="border-left: 1px solid rgb(202, 8, 19)" class="dropdown-content " id="dropdown2">
+  <li><a class="textComic black-text" href="/contacts">Liste de Contacts</a></li>
+  <li><a class="textComic black-text" href="/new-product">Nouvelle BD</a></li>
+  <li><a class="textComic black-text" href="/new-author">Nouvel Auteur</a></li>
+</ul>
+
+<div class="container">
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+  <!-- Footer -->
+   <footer class="section blue-grey darken-3 white-text">
+     <div class="row">
+       <div class="col s12 m6">
+         <div style="margin-left: 100px">
+           <p style="font-size: 25px">Fast <span class="txt" [ngStyle]="{color: color}">Links</span></p>
+           <div style="margin-left: 70px">
+             <a (mouseover)="underLineOn1()" (mouseleave)="underLineOff1()" class="white-text" style="font-size: 18px" href=""><span id="span1">Acceuil </span><i class="fas fa-caret-right"></i></a> <br>
+
+             <a (mouseover)="underLineOn2()" (mouseleave)="underLineOff2()"  class="white-text" style="font-size: 18px" href="#services"><span id="span2">Services </span><i class="fas fa-caret-right"></i></a> <br>
+
+             <a (mouseover)="underLineOn3()" (mouseleave)="underLineOff3()"  class="white-text" style="font-size: 18px" href="/produits"><span id="span3">Produits </span><i class="fas fa-caret-right"></i></a> <br>
+
+             <a (mouseover)="underLineOn4()" (mouseleave)="underLineOff4()"  class="white-text" style="font-size: 18px" href="/blog"><span id="span4">Blog </span><i class="fas fa-caret-right"></i></a> <br>
+
+             <a (mouseover)="underLineOn5()" (mouseleave)="underLineOff5()"  class="white-text" style="font-size: 18px" href="#contact"><span id="span5">Contact </span><i class="fas fa-caret-right"></i></a> <br>
+           </div>
+         </div>
+       </div>
+       <div class="col s12 m6 center">
+         <h4>Follow <span class="txt" [ngStyle]="{color: color}">E-thik</span></h4>
+         <p>Suivez nous sur les réseaux sciaux pour être au courant de toutes les nouveautés dans le monde des distributeurs automatiques modernes</p>
+         <a href="#" class="white-text">
+          <i class="fab fa-facebook fa-2x" style="color: LightBlue; margin: 5px"></i>
+        </a>
+        <a href="#" class="white-text">
+          <i class="fab fa-twitter fa-2x" style="color: LightBlue; margin: 5px"></i>
+        </a>
+        <a href="#" class="white-text">
+          <i class="fab fa-linkedin fa-2x" style="color: LightBlue; margin: 5px"></i>
+        </a>
+        <a href="#" class="white-text">
+          <i class="fab fa-google-plus fa-2x" style="color: LightBlue; margin: 5px"></i>
+        </a>
+        <p class="flow-text">E-thik &copy; 2018 </p>
+       </div>
+     </div>
+
+   </footer>
+
+
+
+
+
+
+
+</div>
