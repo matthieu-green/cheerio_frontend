@@ -51,7 +51,11 @@ export class NewsItemComponent implements OnInit {
   bckColor: string;
   bColor: string;
 
-
+  more = false;
+  m = false;
+  op = 0;
+  height = "0px"
+  top = "0px";
   search = true;
   imageVerif = false;
 
@@ -123,6 +127,42 @@ export class NewsItemComponent implements OnInit {
       }
 
     })
+  }
+
+
+  moreDetails(){
+    this.more = true;
+    this.m = true
+    setTimeout(()=>{
+      this.height = "200px";
+      this.top = "-200px";
+      this.op = 1;
+      setTimeout(()=>{
+        this.m = false;
+      }, 300)
+    })
+  }
+
+  less(){
+    if(this.m == true){
+      return null
+    }else{
+      this.height = "0px";
+      this.top = "0px";
+      this.op = 1;
+      setTimeout(()=>{
+        this.more = false;
+      }, 500)
+    }
+  }
+
+
+  onTransition(event){
+    if(this.more == false){
+      window.open(this.url, '_blank')
+    }else{
+      event.preventDefault();
+    }
   }
 
 }

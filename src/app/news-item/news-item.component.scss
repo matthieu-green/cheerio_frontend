@@ -1,10 +1,17 @@
 .transform {
-  -webkit-transition: all 3s ease;
-  -moz-transition: all 3s ease;
-  -o-transition: all 3s ease;
-  -ms-transition: all 3s ease;
-  transition: all 3s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
   }
+  .transform1 {
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    }
 
 p{
   text-align: justify;

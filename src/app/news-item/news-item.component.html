@@ -28,19 +28,20 @@
 
   <div *ngIf="search">
     <div class="hoverable" style="overflow: hidden; border-radius: 10px; border: 1px solid" [ngStyle]="{'background-color': bckColor, 'border-color': bColor}">
-      <a href="{{url}}" target="_blank" class="black-text">
+      <a (click)="onTransition()" class="black-text">
         <div *ngIf="!imageVerif" class="row">
           <p style="font-size: 25px; margin: 5px;"><img src="{{imageUrl}}" style="max-height: 25px"> {{title}}</p>
           <span style="color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px">{{date}}</span>
         </div>
-        <div  *ngIf="imageVerif" class="row">
+        <div  *ngIf="imageVerif" class="row" (click)="less()">
           <img class="hoverable" src="{{image}}" style="max-width: 90vw;">
           <div class="col s12 m10">
             <img src="{{imageUrl}}" class="right" style="max-height: 25px; position: absolute; margin-top: -30px; margin-right: 0px">
-            <p style="font-size: 20px; margin: 5px"> {{title}}</p>
-            <span style="color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px">{{date}}</span>
-            <p style="text-align: justify; opacity: 0.8; font-style: italic;">{{description}}</p>
+            <p style="font-size: 20px; margin: 5px"> {{title}}<i class="material-icons right" (click)="moreDetails()">more_vert</i></p>
           </div>
+        </div>
+        <div class="transform" *ngIf="more" style="width:90vw; position:absolute; overflow: hidden; border-radius: 10px; background-image: linear-gradient(rgba(20,20,20,0.8), rgb(20,20,20));" [ngStyle]="{'margin-top': top, height: height, opacity: op}">
+          <p  style="text-align: justify; max-width: 82vw; opacity: 0.6; font-weight: 300; font-style: italic; color: white; margin-left: 2vw">{{description}}</p>
         </div>
       </a>
     </div>

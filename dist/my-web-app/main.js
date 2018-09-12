@@ -1437,7 +1437,7 @@ var NewProductComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"search\" class=\"transform hide-on-small-only\">\n\n  <div *ngIf=\"search\">\n    <div class=\"hoverable\" style=\"; border-radius: 10px; border: 1px solid\" [ngStyle]=\"{'background-color': bckColor, 'border-color': bColor}\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px;\"><img src=\"{{imageUrl}}\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2 center\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"{{imageUrl}}\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n<br>\n</div>\n\n<div *ngIf=\"search\" class=\"transform hide-on-med-and-up\">\n\n  <div *ngIf=\"search\">\n    <div class=\"hoverable\" style=\"overflow: hidden; border-radius: 10px; border: 1px solid\" [ngStyle]=\"{'background-color': bckColor, 'border-color': bColor}\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px;\"><img src=\"{{imageUrl}}\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 90vw;\">\n          <div class=\"col s12 m10\">\n            <img src=\"{{imageUrl}}\" class=\"right\" style=\"max-height: 25px; position: absolute; margin-top: -30px; margin-right: 0px\">\n            <p style=\"font-size: 20px; margin: 5px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n<br>\n</div>\n"
+module.exports = "<div *ngIf=\"search\" class=\"transform hide-on-small-only\">\n\n  <div *ngIf=\"search\">\n    <div class=\"hoverable\" style=\"; border-radius: 10px; border: 1px solid\" [ngStyle]=\"{'background-color': bckColor, 'border-color': bColor}\">\n      <a href=\"{{url}}\" target=\"_blank\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px;\"><img src=\"{{imageUrl}}\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\">\n          <div class=\"col s12 m2 center\">\n            <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 190px; margin-top: 20px; border-radius: 5px\">\n          </div>\n          <div class=\"col s12 m10\">\n            <p style=\"font-size: 25px; margin: 5px\"><img src=\"{{imageUrl}}\" style=\"max-height: 25px\"> {{title}}</p>\n            <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n            <p style=\"text-align: justify; opacity: 0.8; font-style: italic;\">{{description}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n  </div>\n\n<br>\n</div>\n\n<div *ngIf=\"search\" class=\"transform hide-on-med-and-up\">\n\n  <div *ngIf=\"search\">\n    <div class=\"hoverable\" style=\"overflow: hidden; border-radius: 10px; border: 1px solid\" [ngStyle]=\"{'background-color': bckColor, 'border-color': bColor}\">\n      <a (click)=\"onTransition()\" class=\"black-text\">\n        <div *ngIf=\"!imageVerif\" class=\"row\">\n          <p style=\"font-size: 25px; margin: 5px;\"><img src=\"{{imageUrl}}\" style=\"max-height: 25px\"> {{title}}</p>\n          <span style=\"color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px\">{{date}}</span>\n        </div>\n        <div  *ngIf=\"imageVerif\" class=\"row\" (click)=\"less()\">\n          <img class=\"hoverable\" src=\"{{image}}\" style=\"max-width: 90vw;\">\n          <div class=\"col s12 m10\">\n            <img src=\"{{imageUrl}}\" class=\"right\" style=\"max-height: 25px; position: absolute; margin-top: -30px; margin-right: 0px\">\n            <p style=\"font-size: 20px; margin: 5px\"> {{title}}<i class=\"material-icons right\" (click)=\"moreDetails()\">more_vert</i></p>\n          </div>\n        </div>\n        <div class=\"transform\" *ngIf=\"more\" style=\"width:90vw; position:absolute; overflow: hidden; border-radius: 10px; background-image: linear-gradient(rgba(20,20,20,0.8), rgb(20,20,20));\" [ngStyle]=\"{'margin-top': top, height: height, opacity: op}\">\n          <p  style=\"text-align: justify; max-width: 82vw; opacity: 0.6; font-weight: 300; font-style: italic; color: white; margin-left: 2vw\">{{description}}</p>\n        </div>\n      </a>\n    </div>\n  </div>\n\n<br>\n</div>\n"
 
 /***/ }),
 
@@ -1448,7 +1448,7 @@ module.exports = "<div *ngIf=\"search\" class=\"transform hide-on-small-only\">\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".transform {\n  transition: all 3s ease; }\n\np {\n  text-align: justify; }\n"
+module.exports = ".transform {\n  transition: all 1s ease; }\n\n.transform1 {\n  transition: all 0.4s ease; }\n\np {\n  text-align: justify; }\n"
 
 /***/ }),
 
@@ -1505,6 +1505,11 @@ var NewsItemComponent = /** @class */ (function () {
         this.equipeUrl = "https://upload.wikimedia.org/wikipedia/fr/4/4f/Logo_L%27%C3%89quipe_21.svg";
         this.wiredUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wired_logo.svg/2000px-Wired_logo.svg.png";
         this.radarUrl = "http://www.livescribe.com/blog/noteworthy2/wp-content/uploads/2014/01/thesprezz-techradar-logo-white2.png";
+        this.more = false;
+        this.m = false;
+        this.op = 0;
+        this.height = "0px";
+        this.top = "0px";
         this.search = true;
         this.imageVerif = false;
     }
@@ -1581,6 +1586,41 @@ var NewsItemComponent = /** @class */ (function () {
                 _this.search = false;
             }
         });
+    };
+    NewsItemComponent.prototype.moreDetails = function () {
+        var _this = this;
+        this.more = true;
+        this.m = true;
+        setTimeout(function () {
+            _this.height = "200px";
+            _this.top = "-200px";
+            _this.op = 1;
+            setTimeout(function () {
+                _this.m = false;
+            }, 300);
+        });
+    };
+    NewsItemComponent.prototype.less = function () {
+        var _this = this;
+        if (this.m == true) {
+            return null;
+        }
+        else {
+            this.height = "0px";
+            this.top = "0px";
+            this.op = 1;
+            setTimeout(function () {
+                _this.more = false;
+            }, 500);
+        }
+    };
+    NewsItemComponent.prototype.onTransition = function (event) {
+        if (this.more == false) {
+            window.open(this.url, '_blank');
+        }
+        else {
+            event.preventDefault();
+        }
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
