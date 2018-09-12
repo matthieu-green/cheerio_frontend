@@ -32,7 +32,7 @@ export class NewsComponent implements OnInit {
   checkTechRadar = true;
   checkBBC = true;
 
-  top = "300px"
+  top = "800px"
 
 
   constructor(private http: HttpClient) { }
@@ -54,7 +54,9 @@ export class NewsComponent implements OnInit {
       .subscribe(news => {
         this.news = news;
         this.wait = false;
-        this.top = "0px";
+        setTimeout(()=>{
+          this.top = "0px"
+        }, 1000)
       },
     errmess => this.errMess = <any>errmess);
   }
