@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { NewsComponent } from '../news/news.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 @Component({
   selector: 'app-news-item',
@@ -53,7 +54,6 @@ export class NewsItemComponent implements OnInit {
 
   more = false;
   m = false;
-  op = 0;
   height = "0px"
   top = "0px";
   search = true;
@@ -136,7 +136,6 @@ export class NewsItemComponent implements OnInit {
     setTimeout(()=>{
       this.height = "200px";
       this.top = "-200px";
-      this.op = 1;
       setTimeout(()=>{
         this.m = false;
       }, 300)
@@ -149,7 +148,6 @@ export class NewsItemComponent implements OnInit {
     }else{
       this.height = "0px";
       this.top = "0px";
-      this.op = 1;
       setTimeout(()=>{
         this.more = false;
       }, 500)

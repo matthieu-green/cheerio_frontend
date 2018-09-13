@@ -187,42 +187,42 @@
          <div class="card-panel grey lighten-3 hoverable">
            <h5>Laisser un <span  [ngStyle]="{color: color}">Message</span></h5>
            <form (ngSubmit)="onSubmit()" #contactForm="ngForm" id="contactForm">
-             <div class="input-field transformMedium" [ngStyle]="{'margin-top': p1}">
+             <div class="input-field transformMedium">
                <i class="material-icons prefix">account_circle</i>
                <label for="firstName">
                  Prénom
                </label>
                <input type="text" id="firstName" [(ngModel)]="contact.firstName" required name="firstName">
              </div>
-             <div class="input-field transformMedium" [ngStyle]="{'margin-top': p2}">
+             <div class="input-field transformMedium">
                <i class="material-icons prefix">account_circle</i>
                <label for="lastName">
                  Nom
                </label>
                <input type="text" id="name" [(ngModel)]="contact.lastName" required name="lastName">
              </div>
-             <div class="input-field transformMedium" [ngStyle]="{'margin-top': p3}">
+             <div class="input-field transformMedium">
                <i class="material-icons prefix">email</i>
                <label for="email">
                  Email
                </label>
                <input type="text" id="email" [(ngModel)]="contact.email" required name="email">
              </div>
-             <div class="input-field transformMedium" [ngStyle]="{'margin-top': p4}">
+             <div class="input-field transformMedium">
                <i class="material-icons prefix">phone</i>
                <label for="phone">
                  Mobile
                </label>
                <input type="text" id="phone" [(ngModel)]="contact.phone" required name="phone">
              </div>
-             <div class="input-field transformMedium" [ngStyle]="{'margin-top': p5}">
+             <div class="input-field transformMedium">
                <i class="material-icons prefix">business</i>
                <label for="company">
                  Entreprise
                </label>
                <input type="text" id="company" [(ngModel)]="contact.company" required name="company">
              </div>
-             <div class="input-field transformMedium" [ngStyle]="{'margin-top': p6}">
+             <div class="input-field transformMedium">
                <i class="material-icons prefix">edit</i>
                <label for="message">
                  Votre Message
