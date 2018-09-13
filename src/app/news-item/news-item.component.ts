@@ -102,7 +102,7 @@ export class NewsItemComponent implements OnInit {
       this.imageUrl = this.wiredUrl;
     }
 
-    if(this.image == null){
+    if(this.image == null || this.image == ""){
       this.imageVerif = false;
     }else{
       this.imageVerif = true;
