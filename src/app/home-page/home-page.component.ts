@@ -41,6 +41,9 @@ export class HomePageComponent implements OnInit {
   mLeftTintin = "0px";
   mLeftAsterix = "0px";
 
+  phone = '0646797512';
+  term: string;
+
   //Product added message
   cart = false;
   inCart = "false";

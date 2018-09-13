@@ -13,7 +13,7 @@ import { AuthorService } from '../services/author.service'
 })
 export class ProductDetailComponent implements OnInit {
 
-  product: {imageName: string, author: string, price: string};
+  product: {imageName: string, author: string, price: string, title: string, isbn: string, synopsis: string, language: string};
 
   authorList =  [];
   authors = [];
@@ -44,7 +44,7 @@ export class ProductDetailComponent implements OnInit {
     .subscribe(product => this.product = product,
       errmess => this.errMess = <any>errmess);
 
-      //get authors list 
+      //get authors list
     this.authorService.getAuthors()
     .subscribe(authors => this.authorList = authors,
       errmess => this.errMess = <any>errmess);

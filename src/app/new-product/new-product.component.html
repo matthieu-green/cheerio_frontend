@@ -12,7 +12,7 @@
   <div class="col s12">
     <h5><span class="txt">Details</span> New Product</h5>
     <br><br>
-    <form (ngSubmit)="onSubmit(q)" #q="ngForm" id="contactForm">
+    <form (ngSubmit)="onSubmit()" #q="ngForm" id="contactForm">
       <div class="input-field">
         <i class="fas fa-list-ul prefix"></i>
         <select name="category" id="category" [(ngModel)]="product.category"  >
