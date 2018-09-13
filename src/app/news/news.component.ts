@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { baseUrl } from '../baseurl';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-news',
@@ -34,10 +35,18 @@ export class NewsComponent implements OnInit {
 
   top = "800px"
 
+  w = '';
+
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
+
+    setTimeout(()=>{
+      let width = $('#preloader').width();
+      let windowWidth = $(document).width();
+      this.w = (windowWidth/2 - width/2) + "px";
+    }, 100)
 
     this.getNews();
     setInterval(()=>{
