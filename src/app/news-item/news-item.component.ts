@@ -39,7 +39,7 @@ export class NewsItemComponent implements OnInit {
   wiredColor1 = "rgba(0, 0, 0, 0.6)"
 
 
-  mondeUrl = "http://www.zecraft.com/wp-content/uploads/2016/04/le-monde-logotype-old.png";
+  mondeUrl = "http://aqua-etiam.com/wp-content/uploads/2015/03/mondefr_ios_app.png";
   economistUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/TheEconomistLogo.svg/2000px-TheEconomistLogo.svg.png"
   techUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/TechCrunch_logo.svg/1200px-TechCrunch_logo.svg.png"
   hackerUrl = "https://techcrunch.com/wp-content/uploads/2013/05/hacker-news1.jpg?w=600"

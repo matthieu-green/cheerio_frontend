@@ -27,7 +27,7 @@
 <div *ngIf="search" class="hide-on-med-and-up">
 
   <div *ngIf="search">
-    <div class="hoverable" style="overflow: hidden; border-radius: 10px; border: 1px solid" [ngStyle]="{'background-color': bckColor, 'border-color': bColor}">
+    <div class="hoverable" style="overflow: hidden; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border: 1px solid" [ngStyle]="{'background-color': bckColor, 'border-color': bColor}">
       <a (click)="onTransition()" class="black-text">
         <div *ngIf="!imageVerif" class="row">
           <p style="font-size: 25px; margin: 5px;"><img src="{{imageUrl}}" style="max-height: 25px"> {{title}}</p>
@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="transform1" *ngIf="more" style="width:90vw; position:absolute; overflow: hidden; border-radius: 10px; background-image: linear-gradient(rgba(20,20,20,0.8), rgb(20,20,20));" [ngStyle]="{'margin-top': top, height: height}">
-          <p  style="text-align: justify; max-width: 82vw; opacity: 0.6; font-weight: 300; font-style: italic; color: white; margin-left: 2vw; margin-top: 50px">{{description}}</p>
+          <p  style="text-align: justify; max-width: 82vw; opacity: 0.6; font-weight: 300; font-style: italic; color: white; margin-left: 3vw; margin-top: 50px">{{description}}</p>
         </div>
       </a>
     </div>
