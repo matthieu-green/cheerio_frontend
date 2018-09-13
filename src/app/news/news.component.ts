@@ -42,12 +42,6 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
 
-    setTimeout(()=>{
-      let width = $('#preloader').width();
-      let windowWidth = $(document).width();
-      this.w = (windowWidth/2 - width/2) + "px";
-    }, 100)
-
     this.getNews();
     setInterval(()=>{
       this.getNews1();
@@ -57,15 +51,13 @@ export class NewsComponent implements OnInit {
 
 
   getNews(){
-    this.top = "300px"
+    this.top = "200px"
     this.wait = true;
     this.http.get(baseUrl + "fetch")
       .subscribe(news => {
         this.news = news;
         this.wait = false;
-        setTimeout(()=>{
-          this.top = "0px"
-        }, 1000)
+        this.top = "0px"
       },
     errmess => this.errMess = <any>errmess);
   }
