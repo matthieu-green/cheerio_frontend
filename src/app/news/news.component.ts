@@ -43,9 +43,9 @@ export class NewsComponent implements OnInit {
   ngOnInit() {
 
     this.getNews();
-    setInterval(()=>{
-      this.getNews1();
-    },10000)
+    // setInterval(()=>{
+    //   this.getNews1();
+    // },10000)
   }
 
 
@@ -62,17 +62,17 @@ export class NewsComponent implements OnInit {
     errmess => this.errMess = <any>errmess);
   }
 
-  getNews1(){
-    this.http.get(baseUrl + "fetch")
-      .subscribe(news => {
-        this.news1 = news;
-        this.wait = false;
-        if(this.news1[0].title != this.news[0].title){
-          this.news = this.news1;
-        }
-      },
-    errmess => this.errMess = <any>errmess);
-  }
+  // getNews1(){
+  //   this.http.get(baseUrl + "fetch")
+  //     .subscribe(news => {
+  //       this.news1 = news;
+  //       this.wait = false;
+  //       if(this.news1[0].title != this.news[0].title){
+  //         this.news = this.news1;
+  //       }
+  //     },
+  //   errmess => this.errMess = <any>errmess);
+  // }
 
 test(){
   alert(this.checkEquipe)
