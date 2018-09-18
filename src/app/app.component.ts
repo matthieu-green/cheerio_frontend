@@ -198,25 +198,6 @@ reload(){
 }
 
 
-
-//initialise google maps
-initMap(){
-  const coords = new google.maps.LatLng(48.839191, 2.284871);
-  let mapOptions: google.maps.MapOptions = {
-    center: coords,
-    zoom: 17,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
-
-  this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-
-  const marker: google.maps.Marker = new google.maps.Marker({
-    map: this.map,
-    position: coords,
-    title: 'E-thik Corporate'
-  })
-}
-
 //check if the sign up email are the same
 checkEmail(){
   const m = document.getElementById('username1');

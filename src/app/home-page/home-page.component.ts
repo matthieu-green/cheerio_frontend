@@ -17,10 +17,6 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  @ViewChild("map") mapElement;
-  map: any;
-
-
   //theme color
   color = "rgb(8, 100, 19)";
 
@@ -119,11 +115,6 @@ export class HomePageComponent implements OnInit {
       this.startTop = "0px"
     }, 100)
 
-    //Google maps
-    this.initMap();
-
-
-
   }
 
 
@@ -161,24 +152,6 @@ export class HomePageComponent implements OnInit {
           console.log(error);
           this.errMess = error
         })
-  }
-
-  //initialise google maps
-  initMap(){
-    const coords = new google.maps.LatLng(48.8568175, 2.2723135);
-    let mapOptions: google.maps.MapOptions = {
-      center: coords,
-      zoom: 17,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-
-    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-
-    const marker: google.maps.Marker = new google.maps.Marker({
-      map: this.map,
-      position: coords,
-      title: 'Comic Store'
-    })
   }
 
   //page transition

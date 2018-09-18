@@ -35,6 +35,7 @@ import { AuthorComponent } from './author/author.component';
 import { NewAuthorComponent } from './new-author/new-author.component';
 import { NewsComponent } from './news/news.component';
 import { NewsItemComponent } from './news-item/news-item.component';
+import { MapsComponent } from './maps/maps.component';
 
 
 const appRoutes: Routes= [
@@ -45,6 +46,7 @@ const appRoutes: Routes= [
   { path: "new-product", canActivate: [AuthGuard], component: NewProductComponent},
   { path: "test", component: ProductDetailComponent},
   { path: "news", component: NewsComponent},
+  { path: "maps", component: MapsComponent},
   { path: "new-author", canActivate: [AuthGuard], component: NewAuthorComponent},
   { path: "contacts", canActivate: [AuthGuard], component: ContactListComponent},
   { path: '**', redirectTo: '/not-found'}
@@ -67,18 +69,15 @@ const appRoutes: Routes= [
     AuthorComponent,
     NewAuthorComponent,
     NewsComponent,
-    NewsItemComponent
+    NewsItemComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
-    HttpClientModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDOCn3zbngn6maokzk0O6QpYzUArGSVzIw'
-    })
-
+    HttpClientModule
 
   ],
   providers: [
