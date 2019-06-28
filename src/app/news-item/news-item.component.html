@@ -1,4 +1,4 @@
-<div *ngIf="search" class="hide-on-small-only">
+<div *ngIf="search" class="hide-on-small-only" [ngStyle]="{'margin-top': top}">
 
   <div *ngIf="search">
     <div class="hoverable" style="; border-radius: 10px; border: 1px solid" [ngStyle]="{'background-color': bckColor, 'border-color': bColor}">

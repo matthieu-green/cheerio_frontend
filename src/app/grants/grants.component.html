@@ -1,7 +1,9 @@
-<h1>Grants Scraper</h1>
+<h1 style="text-align: center; font-family: 'Gill Sans'; font-weight: 300; letter-spacing: 25px;">GRANTS SCRAPER</h1>
+
+<br>
 
 
-<!-- <div>
+<div class="container">
   <ul class="collapsible">
     <li>
       <div class="collapsible-header"><i class="material-icons">search</i>Search Bar</div>
@@ -18,57 +20,17 @@
       <div class="collapsible-body">
         <p>
           <label>
-            <input type="checkbox" [(ngModel)]="checkEquipe"/>
-            <span>L'équipe</span>
-            <span style="opacity: 0">aaa</span>
-          </label>
-          <label>
-            <input type="checkbox" [(ngModel)]="checkMonde"/>
-            <span>Le Monde</span>
-            <span style="opacity: 0">aaa</span>
-          </label>
-          <label>
-            <input type="checkbox" [(ngModel)]="checkWallstreet"/>
-            <span>The Worl Street Journal</span>
-            <span style="opacity: 0">aaa</span>
-          </label>
-          <label>
-            <input type="checkbox" [(ngModel)]="checkEconomist"/>
-            <span>The Economist</span>
-            <span style="opacity: 0">aaa</span>
-          </label>
-          <label>
-            <input type="checkbox" [(ngModel)]="checkTech"/>
-            <span>TechCrunch</span>
-            <span style="opacity: 0">aaa</span>
-          </label>
-          <label>
-            <input type="checkbox" [(ngModel)]="checkHacker"/>
-            <span>Hacker News</span>
-            <span style="opacity: 0">aaa</span>
-          </label>
-          <label>
-            <input type="checkbox" [(ngModel)]="checkWired"/>
-            <span>Wired</span>
-            <span style="opacity: 0">aaa</span>
-          </label>
-          <label>
-            <input type="checkbox" [(ngModel)]="checkTechRadar"/>
-            <span>Tech Radar</span>
-            <span style="opacity: 0">aaa</span>
-          </label>
-          <label>
-            <input type="checkbox" [(ngModel)]="checkBBC"/>
-            <span>BBC News</span>
+            <input type="checkbox" [(ngModel)]="checkCoordSud"/>
+            <span>Coordination Sud</span>
             <span style="opacity: 0">aaa</span>
           </label>
         </p>
       </div>
     </li>
   </ul>
-</div> -->
+</div>
 
-<!-- <button *ngIf="!wait" (click)="getNews()" class="btn-flat right"><i class="fas fa-sync-alt"></i></button> -->
+<button *ngIf="!wait" (click)="getGrants()" class="btn-flat right"><i class="fas fa-sync-alt"></i></button>
 
 
 <img *ngIf="wait" id="preloader" style="max-height: 200px; margin-top: 3%; margin-left: 40%" src="https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-18.gif">

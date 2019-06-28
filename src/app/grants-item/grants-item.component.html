@@ -1,7 +1,7 @@
-<div *ngIf="search" class="hide-on-small-only">
+<div *ngIf="search" class="hide-on-small-only" [ngStyle]="{'margin-top': top}">
 
   <div>
-    <div class="hoverable" style="; border-radius: 10px; border: 1px solid" [ngStyle]="{'background-color': bckColor, 'border-color': bColor}">
+    <div class="hoverable" style="; border-radius: 10px; border: 1px solid" [ngStyle]="{'background-color': bckColor, 'border-color': bColor, 'margin-top': top}">
       <a href="{{url}}" target="_blank" class="black-text">
         <div class="row">
           <div class="col s2">

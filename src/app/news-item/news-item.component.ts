@@ -59,6 +59,7 @@ export class NewsItemComponent implements OnInit {
   search = true;
   imageVerif = false;
 
+
   constructor(private newsComponent: NewsComponent) { }
 
   ngOnInit() {

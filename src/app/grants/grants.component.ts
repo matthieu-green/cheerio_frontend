@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {GrantsItemComponent} from '../grants-item/grants-item.component'
 import { baseUrl } from '../baseurl';
 import * as $ from 'jquery';
 
@@ -13,7 +14,7 @@ export class GrantsComponent implements OnInit {
   grants: any;
   errMess: string;
   wait = false;
-  // search: string;
+  search: string;
   // lemonde: any;
   // lefig: any;
   // techCrunch: any;
@@ -22,6 +23,7 @@ export class GrantsComponent implements OnInit {
   // monde = true;
   // figaro = true;
   //
+  checkCoordSud = true
   // checkEquipe = true;
   // checkMonde = true;
   // checkEconomist = true;
@@ -57,6 +59,7 @@ export class GrantsComponent implements OnInit {
         this.grants = grants;
         this.wait = false;
         this.top = "0px"
+        // this.grantsItemComponent.top = 0
       },
     errmess => this.errMess = <any>errmess);
   }

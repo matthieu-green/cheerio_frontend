@@ -61,15 +61,18 @@ export class GrantsItemComponent implements OnInit {
   more = false;
   m = false;
   height = "0px"
-  top = "0px";
   search = true;
   imageVerif = false;
+
+  top = 50 + this.index
+
 
   constructor(private grantsComponent: GrantsComponent) { }
 
   ngOnInit() {
 
-    console.log(this.index);
+    console.log(this.top);
+
 
     if(this.source == "coordSud"){
       this.bckColor = this.coordSud;
@@ -84,50 +87,24 @@ export class GrantsItemComponent implements OnInit {
     // }
     //
 
-    // setInterval(()=>{
-    //     if(this.category == "hacker-news" && this.newsComponent.checkHacker == true || this.category == "techcrunch" && this.newsComponent.checkTech == true || this.category == "le-monde" && this.newsComponent.checkMonde == true ||
-    //   this.category == "lequipe" && this.newsComponent.checkEquipe == true || this.category == "the-economist" && this.newsComponent.checkEconomist == true || this.category == "the-wall-street-journal" && this.newsComponent.checkWallstreet == true ||
-    // this.category == "wired" && this.newsComponent.checkWired == true || this.category == "techradar" && this.newsComponent.checkTechRadar == true|| this.category == "bbc-news" && this.newsComponent.checkBBC == true ){
-    //       if(this.newsComponent.search != "" && this.newsComponent.search != undefined){
-    //         if(this.title.toLowerCase().includes(this.newsComponent.search.toLowerCase()) || this.description != null && this.description.toLowerCase().includes(this.newsComponent.search.toLowerCase())){
-    //           this.search = true;
-    //         }else{
-    //           this.search = false;
-    //         }
-    //       }else{
-    //         this.search = true;
-    //       }
-    //   }else{
-    //     this.search = false;
-    //   }
-    //
-    // })
-  }
+    setInterval(()=>{
+        if(this.source == "coordSud" && this.grantsComponent.checkCoordSud == true ){
+          if(this.grantsComponent.search != "" && this.grantsComponent.search != undefined){
+            if(this.title.toLowerCase().includes(this.grantsComponent.search.toLowerCase()) || this.theme != null && this.theme.toLowerCase().includes(this.grantsComponent.search.toLowerCase())){
+              this.search = true;
+            }else{
+              this.search = false;
+            }
+          }else{
+            this.search = true;
+          }
+      }else{
+        this.search = false;
+      }
 
-
-  moreDetails(){
-    this.more = true;
-    this.m = true
-    setTimeout(()=>{
-      this.height = "200px";
-      this.top = "-200px";
-      setTimeout(()=>{
-        this.m = false;
-      }, 300)
     })
   }
 
-  less(){
-    if(this.m == true){
-      return null
-    }else{
-      this.height = "0px";
-      this.top = "0px";
-      setTimeout(()=>{
-        this.more = false;
-      }, 500)
-    }
-  }
 
 
   onTransition(event){
