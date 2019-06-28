@@ -20,6 +20,7 @@ export class GrantsComponent implements OnInit {
   checkCoordSud = true
   checkLuxdev = true
   checkAecid = true
+  checkUsaid = true
 
   top = "800px"
 

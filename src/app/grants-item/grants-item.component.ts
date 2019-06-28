@@ -21,6 +21,7 @@ export class GrantsItemComponent implements OnInit {
   coordSud = "rgb(254, 198, 46, 0.3)"
   luxdev = "rgba(50, 111, 144, 0.3)"
   aecid = "rgba(252, 13, 27, 0.5)"
+  usaid = "rgba(80, 180, 40, 0.4)"
 
   mondeColor = "rgba(186, 28, 34, 0.5)";
   techColor = "rgba(23, 158, 25, 0.3)"
@@ -34,7 +35,7 @@ export class GrantsItemComponent implements OnInit {
   coordSud1 = "rgb(254, 198, 46, 0.3)"
   luxdev1 = "rgba(50, 111, 144, 0.3)"
   aecid1 = "rgba(252, 13, 27, 0.5)"
-
+  usaid1 = "rgba(80, 180, 40, 0.4)"
 
   mondeColor1 = "rgba(186, 28, 34, 0.5)";
   techColor1 = "rgba(23, 158, 25, 0.3)"
@@ -47,6 +48,7 @@ export class GrantsItemComponent implements OnInit {
   coordSudUrl = "https://www.coordinationsud.org/wp-content/uploads/logo-21-376x282.png";
   luxdevUrl = "https://upload.wikimedia.org/wikipedia/de/thumb/7/71/Lux-Development_logo.svg/1200px-Lux-Development_logo.svg.png"
   aecidUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AECID_logo.svg/1280px-AECID_logo.svg.png"
+  usaidUrl = "https://media.dhakatribune.com/uploads/2016/08/US-Embassy.gif"
 
 
 
@@ -82,6 +84,10 @@ export class GrantsItemComponent implements OnInit {
       this.bckColor = this.aecid;
       this.bColor = this.aecid1;
       this.imageUrl = this.aecidUrl;
+    }else if(this.source == "usaid"){
+      this.bckColor = this.usaid;
+      this.bColor = this.usaid1;
+      this.imageUrl = this.usaidUrl;
     }
 
     // if(this.image == null || this.image == ""){
@@ -92,7 +98,8 @@ export class GrantsItemComponent implements OnInit {
     //
 
     setInterval(()=>{
-        if(this.source == "coordSud" && this.grantsComponent.checkCoordSud == true || this.source == "luxdev" && this.grantsComponent.checkLuxdev == true || this.source == "aecid" && this.grantsComponent.checkAecid == true ){
+        if(this.source == "coordSud" && this.grantsComponent.checkCoordSud == true || this.source == "luxdev" && this.grantsComponent.checkLuxdev == true || this.source == "aecid" && this.grantsComponent.checkAecid == true
+      ||  this.source == "usaid" && this.grantsComponent.checkUsaid == true){
           if(this.grantsComponent.search != "" && this.grantsComponent.search != undefined){
             if(this.title.toLowerCase().includes(this.grantsComponent.search.toLowerCase()) || this.theme != null && this.theme.toLowerCase().includes(this.grantsComponent.search.toLowerCase())){
               this.search = true;
