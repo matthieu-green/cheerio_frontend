@@ -20,10 +20,9 @@ export class GrantsItemComponent implements OnInit {
 
   coordSud = "rgb(254, 198, 46, 0.3)"
   luxdev = "rgba(50, 111, 144, 0.3)"
-
+  aecid = "rgba(252, 13, 27, 0.5)"
 
   mondeColor = "rgba(186, 28, 34, 0.5)";
-  economistColor = "rgba(252, 13, 27, 0.5)"
   techColor = "rgba(23, 158, 25, 0.3)"
   hackerColor = "rgba(252, 102, 33, 0.3)"
   wallstreetColor = "rgba(100, 100, 100, 0.3)"
@@ -34,9 +33,10 @@ export class GrantsItemComponent implements OnInit {
 
   coordSud1 = "rgb(254, 198, 46, 0.3)"
   luxdev1 = "rgba(50, 111, 144, 0.3)"
+  aecid1 = "rgba(252, 13, 27, 0.5)"
+
 
   mondeColor1 = "rgba(186, 28, 34, 0.5)";
-  economistColor1 = "rgba(252, 13, 27, 0.5)"
   techColor1 = "rgba(23, 158, 25, 0.3)"
   hackerColor1 = "rgba(252, 102, 33, 0.3)"
   wallstreetColor1 = "rgba(100, 100, 100, 0.3)"
@@ -46,6 +46,7 @@ export class GrantsItemComponent implements OnInit {
 
   coordSudUrl = "https://www.coordinationsud.org/wp-content/uploads/logo-21-376x282.png";
   luxdevUrl = "https://upload.wikimedia.org/wikipedia/de/thumb/7/71/Lux-Development_logo.svg/1200px-Lux-Development_logo.svg.png"
+  aecidUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AECID_logo.svg/1280px-AECID_logo.svg.png"
 
 
 
@@ -77,6 +78,10 @@ export class GrantsItemComponent implements OnInit {
       this.bckColor = this.luxdev;
       this.bColor = this.luxdev1;
       this.imageUrl = this.luxdevUrl;
+    }else if(this.source == "aecid"){
+      this.bckColor = this.aecid;
+      this.bColor = this.aecid1;
+      this.imageUrl = this.aecidUrl;
     }
 
     // if(this.image == null || this.image == ""){
@@ -87,7 +92,7 @@ export class GrantsItemComponent implements OnInit {
     //
 
     setInterval(()=>{
-        if(this.source == "coordSud" && this.grantsComponent.checkCoordSud == true || this.source == "luxdev" && this.grantsComponent.checkLuxdev == true ){
+        if(this.source == "coordSud" && this.grantsComponent.checkCoordSud == true || this.source == "luxdev" && this.grantsComponent.checkLuxdev == true || this.source == "aecid" && this.grantsComponent.checkAecid == true ){
           if(this.grantsComponent.search != "" && this.grantsComponent.search != undefined){
             if(this.title.toLowerCase().includes(this.grantsComponent.search.toLowerCase()) || this.theme != null && this.theme.toLowerCase().includes(this.grantsComponent.search.toLowerCase())){
               this.search = true;
