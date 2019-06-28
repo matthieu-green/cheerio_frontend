@@ -15,24 +15,10 @@ export class GrantsComponent implements OnInit {
   errMess: string;
   wait = false;
   search: string;
-  // lemonde: any;
-  // lefig: any;
-  // techCrunch: any;
-  // hackerNews: any;
-  // equipe: any;
-  // monde = true;
-  // figaro = true;
-  //
+
+
   checkCoordSud = true
-  // checkEquipe = true;
-  // checkMonde = true;
-  // checkEconomist = true;
-  // checkWired = true;
-  // checkTech = true;
-  // checkHacker = true;
-  // checkWallstreet = true;
-  // checkTechRadar = true;
-  // checkBBC = true;
+  checkLuxdev = true
 
   top = "800px"
 
