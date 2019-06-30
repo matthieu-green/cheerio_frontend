@@ -39,10 +39,46 @@
             <span>US GRANTS</span>
             <span style="opacity: 0">aaa</span>
           </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkFundsForNGO"/>
+            <span>Funds For NGOs</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkUsembassy"/>
+            <span>US EMBASSY</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkIdrc"/>
+            <span>IDRC</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkEnabel"/>
+            <span>ENABEL</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="checkAfd"/>
+            <span>AFD</span>
+            <span style="opacity: 0">aaa</span>
+          </label>
         </p>
       </div>
     </li>
   </ul>
+</div>
+
+<!-- Modal Structure -->
+<div id="test" class="modal">
+  <div class="modal-content">
+    <h4>More Info on Grant</h4>
+    {{modal}}
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
 </div>
 
 <button *ngIf="!wait" (click)="getGrants()" class="btn-flat right"><i class="fas fa-sync-alt"></i></button>
@@ -61,6 +97,7 @@
     [validite] = "grant.validite"
     [financement] ="grant.financement"
     [source] ="grant.source"
+    [info] = "grant.info"
     [index] = "i"
   ></app-grants-item>
 </div>

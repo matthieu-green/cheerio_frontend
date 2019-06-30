@@ -10,7 +10,12 @@
           <div class="col s10">
             <p style="font-size: 25px; margin: 5px;">{{title}}</p>
             <span style="color: rgba(220, 8, 19, 0.6); font-style: italic; margin-left: 5px">{{validite}}  </span><span style="color: grey; margin-left: 5px">|  {{financement}}</span><br><br>
-            <span style="color: rgba(59, 140, 19, 0.6); margin-left: 5px"><strong>Thèmes </strong>: {{theme}}</span>
+            <div class="row">
+              <div class="col s11" style="text-align: justify">
+                <span *ngIf="!buttonVerif" style="color: rgba(59, 140, 19, 0.6); margin-left: 5px; text-align: justify"><strong style="color: black">Description </strong>: {{theme}}<br><br></span>
+                <span *ngIf="buttonVerif" style="color: rgba(59, 140, 19, 0.6); margin-left: 5px; text-align: justify; margin-right: 20px"><a class="btn" href="{{theme}}">Télecharger Proposition</a></span><a *ngIf="info" class="btn modal-trigger" href="#test" (click)="modalFunction()">Info Box</a>
+              </div>
+            </div>
           </div>
         </div>
       </a>

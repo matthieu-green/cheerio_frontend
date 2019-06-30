@@ -16,11 +16,18 @@ export class GrantsComponent implements OnInit {
   wait = false;
   search: string;
 
+  modal: any;
+
 
   checkCoordSud = true
   checkLuxdev = true
   checkAecid = true
   checkUsaid = true
+  checkFundsForNGO = true
+  checkUsembassy = true
+  checkIdrc = true
+  checkEnabel = true
+  checkAfd = true
 
   top = "800px"
 
